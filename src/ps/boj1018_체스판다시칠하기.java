@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class boj1018 {
+public class boj1018_체스판다시칠하기 {
 	static int N, M, result = Integer.MAX_VALUE;
 	static char[][] board;
 	static int[][] dir = {{0, 1}, {1, 0}};

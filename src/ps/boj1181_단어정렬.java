@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class boj1181 {
+public class boj1181_단어정렬 {
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		

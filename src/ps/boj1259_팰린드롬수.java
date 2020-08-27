@@ -2,7 +2,7 @@ package ps;
 
 import java.util.Scanner;
 
-public class boj1259 {
+public class boj1259_ÆÓ¸°µå·Ò¼ö {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

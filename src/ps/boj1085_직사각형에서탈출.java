@@ -2,7 +2,7 @@ package ps;
 
 import java.util.Scanner;
 
-public class boj1085 {
+public class boj1085_직사각형에서탈출 {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
