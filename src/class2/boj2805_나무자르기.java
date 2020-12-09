@@ -18,29 +18,29 @@ public class boj2805_나무자르기 {
         int M = sc.nextInt();
 
         int[] trees = new int[N];
-        int minh = 0, maxh = 0;
+        int start = 0, end = 0;
         for (int i = 0; i < N; i++) {
             trees[i] = sc.nextInt();
-            if (trees[i] > maxh)
-                maxh = trees[i];
+            if (trees[i] > end)
+                end = trees[i];
         }
 
         int result = 0;
 
-        while (minh <= maxh) {
-            int next = (minh + maxh) / 2;
+        while (start <= end) {
+            int mid = (start + end) / 2;
 
             long cut = 0;
             for (int i = 0; i < N; i++) {
-                if (trees[i] > next)
-                    cut += trees[i] - next;
+                if (trees[i] > mid)
+                    cut += trees[i] - mid;
             }
 
             if (cut < M) {
-                maxh = next-1;
+                end = mid-1;
             } else {
-                minh = next+1;
-                result = next;
+                start = mid+1;
+                result = mid;
             }
         }
 
