@@ -1,6 +1,6 @@
-package programmers;
+package kakao_blind_2018;
 
-public class dartgame {
+public class prog17682_다트게임 {
 	
 	public static void main(String[] args) {
 		System.out.println(solution("1S2D*3T"));
