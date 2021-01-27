@@ -50,7 +50,7 @@ public class boj1967_트리의지름 {
 		Queue<Node> q = new LinkedList<>();
 		
 		q.add(start);
-		midx = 1;
+		midx = 1;	// 이걸 0으로 해서 NPE 났었음...
 		
 		while(!q.isEmpty()) {
 			Node now = q.poll();
