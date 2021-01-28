@@ -28,7 +28,5 @@ public class boj10610_30 {
 		} else {
 			System.out.println("-1");
 		}
-		
 	}
-
 }
