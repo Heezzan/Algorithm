@@ -19,7 +19,7 @@ public class prog17684_압축 {
         
         HashMap<String, Integer> dic = new HashMap<>();
         for(int i = 0; i < 26; i++)
-        	dic.put(Character.toString('A'+i), i+1);
+        	dic.put(Character.toString((char) ('A'+i)), i+1);
         
         
         int idx = 0;
