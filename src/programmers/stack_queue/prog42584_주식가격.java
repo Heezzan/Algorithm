@@ -1,4 +1,4 @@
-package datastructure;
+package programmers.stack_queue;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
