@@ -7,8 +7,6 @@ import java.util.*;
 
 public class boj3197_백조의호수 {
     static int[][] dir = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
-    static char[][] map;
-    static int R, C;
 
     static class Pos {
         int i, j, time;
@@ -28,6 +26,7 @@ public class boj3197_백조의호수 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
+
         int R = Integer.parseInt(st.nextToken());
         int C = Integer.parseInt(st.nextToken());
         char[][] map = new char[R][C];
