@@ -1,5 +1,8 @@
 package graph;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class boj5213_과외맨 {
@@ -17,27 +20,24 @@ public class boj5213_과외맨 {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
 
         int[][][] tile = new int[N][N*2][2];
         int idx = 1;
+        StringTokenizer st = null;
         for (int i = 0; i < N; i++) {
             int j = (i%2 == 0) ? 0 : 1;
             for (; j+1 < N*2; j+=2) {
+                st = new StringTokenizer(br.readLine());
                 tile[i][j][0] = tile[i][j+1][0] = idx++;
-                tile[i][j][1] = sc.nextInt();
-                tile[i][j+1][1] = sc.nextInt();
+                tile[i][j][1] = Integer.parseInt(st.nextToken());
+                tile[i][j+1][1] = Integer.parseInt(st.nextToken());
             }
         }
 
-        PriorityQueue<Pos> pq = new PriorityQueue<>(new Comparator<Pos>() {
-            @Override
-            public int compare(Pos o1, Pos o2) {
-                return o1.cnt-o2.cnt;
-            }
-        });
+        PriorityQueue<Pos> pq = new PriorityQueue<>((o1, o2) -> o1.cnt-o2.cnt);
         int[][] visited = new int[N][N*2];
         visited[0][0] = 1;
 
